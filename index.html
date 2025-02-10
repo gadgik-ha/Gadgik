@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
     <title>Моя визитка</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -18,7 +18,7 @@
             color: #333;
             min-height: 100vh;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased; 
+            -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
         }
         .container {
@@ -55,12 +55,14 @@
             justify-content: center;
             position: relative;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            -webkit-transform: translateZ(0); 
-            transform: translateZ(0);
+            -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
         .links a:hover {
             background-color: #145a26;
-            transform: scale(1.05);
+            transform: scale(1);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
         .links a i {
@@ -78,68 +80,35 @@
             position: absolute;
             left: 15px;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch; 
-        }
-        .modal-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80%;
-            overflow-y: auto;
-            text-align: center;
-        }
-        .modal-content h2 {
-            margin: 0 0 20px;
-            color: #208a39;
-        }
-        .modal-content a {
-            display: block;
-            text-decoration: none;
-            color: #208a39;
-            padding: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .modal-content a:hover {
-            background-color: #f0f0f0;
-        }
-        .close-btn {
-            background-color: #175f28;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .logo {
+                max-width: 180px;
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            .links {
+                max-width: 90%;
+            }
             .links a {
-                height: 50px;
+                height: 45px;
+                font-size: 14px;
             }
             .links a i {
-                font-size: 14px;
-                width: 25px;
-                height: 25px;
+                width: 22px;
+                height: 22px;
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="https://imgur.com/OUktcI0"><img src="https://i.imgur.com/OUktcI0.png" title="source: imgur.com" /></a>
+        <img src="https://i.imgur.com/OUktcI0.png" alt="Логотип" class="logo">
         <h1>техніка | аксесуари | сервіс</h1>
         <div class="links">
             <a href="https://www.instagram.com/gadgik.ua" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -149,3 +118,6 @@
             <a href="https://gadgik.net/" target="_blank"><i class="fas fa-shopping-cart"></i> Інтернет-магазин</a>
         </div>
     </div>
+</body>
+</html>
+
