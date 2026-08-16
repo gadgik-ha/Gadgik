@@ -5,7 +5,26 @@
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#f4f7f4" name="theme-color"/>
 <title>GadgiK</title>
-<link href="style.css" rel="stylesheet"/>
+<link href="style.css?v=20260817-0011" rel="stylesheet"/>
+<style id="header-spacing-hotfix">
+/* Cache-safe header polish: visually crop the unused space inside the logo asset. */
+.header{padding-top:0!important;padding-bottom:8px!important}
+.logo{margin:0 auto -22px!important}
+.brand-block:after{margin-top:6px!important}
+@media (min-width:600px) and (max-width:1023px){
+  .header{padding-bottom:10px!important}
+  .logo{margin:0 auto -26px!important}
+  .brand-block:after{margin-top:7px!important}
+}
+@media (min-width:1024px){
+  .header{padding-bottom:12px!important}
+  .logo{margin:0 auto -34px!important}
+  .brand-block:after{margin-top:7px!important}
+}
+@media (min-width:800px) and (max-width:1023px) and (orientation:landscape){
+  .logo{margin:0 0 -26px!important}
+}
+</style>
 <meta content="GadgiK — техніка, аксесуари, сервіс. Інтернет-магазин та офіційні соціальні мережі." name="description"/><meta content="light" name="color-scheme"/></head>
 <body>
 <main class="page">
