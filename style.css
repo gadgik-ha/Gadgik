@@ -326,13 +326,22 @@ a:focus-visible{
   .logo{width:174px;max-width:none}
   .tagline{font-size:14px}
   .brand-block:after{width:34px;margin-top:8px}
-  .shop{min-height:108px;grid-template-columns:58px minmax(0,1fr) 42px;gap:16px;padding:18px;border-radius:29px}
+
+  .shop{
+    min-height:108px;
+    grid-template-columns:58px minmax(0,1fr) 42px;
+    gap:16px;
+    padding:18px;
+    border-radius:29px;
+  }
   .shop-icon{width:58px;height:58px;border-radius:19px}
   .shop-title{font-size:20px}
   .shop-url{font-size:12.5px;margin-top:7px}
   .shop-arrow{width:42px;height:42px}
+
   .section-head{margin:26px 3px 13px}
   .section-head h2{font-size:19px}
+
   .social-panel{border-radius:28px}
   .social{min-height:132px;padding:18px}
   .icon{width:48px;height:48px;border-radius:15px}
@@ -512,4 +521,154 @@ a:focus-visible{
   .section-head{margin:0 2px 12px}
   .social{min-height:116px;padding:15px}
   .footer{margin-top:20px}
+}
+
+/* ===== FINAL POLISH PASS ===== */
+body .page .header{
+  padding:0 0 8px!important;
+}
+body .page .brand-block .logo{
+  width:174px;
+  max-width:54vw;
+  margin:0 auto -42px!important;
+  transform:translateY(-4px);
+}
+body .page .brand-block .tagline{
+  font-size:13.5px;
+  line-height:1.18;
+  letter-spacing:-.22px;
+}
+body .page .brand-block:after{
+  width:32px;
+  margin-top:6px!important;
+}
+body .page .shop{
+  margin-top:2px;
+}
+
+@media (max-height:720px){
+  body .page .brand-block .logo{
+    width:164px;
+    margin-bottom:-40px!important;
+  }
+}
+
+@media (min-width:600px) and (max-width:1023px){
+  body .page .header{padding-bottom:10px!important}
+  body .page .brand-block .logo{
+    width:206px;
+    max-width:none;
+    margin-bottom:-50px!important;
+    transform:translateY(-4px);
+  }
+  body .page .brand-block .tagline{font-size:14.5px}
+  body .page .brand-block:after{width:36px;margin-top:7px!important}
+}
+
+@media (min-width:1024px){
+  body{
+    padding:30px;
+  }
+  body .page{
+    width:min(100%,1280px);
+    padding:58px 64px 34px;
+    border-radius:40px;
+  }
+  body .page .layout{
+    grid-template-columns:minmax(0,.9fr) minmax(540px,1.1fr);
+    gap:76px;
+  }
+  body .page .header{
+    padding:0 0 16px!important;
+  }
+  body .page .brand-block .logo{
+    width:280px;
+    max-width:none;
+    margin:0 auto -64px!important;
+    transform:translateY(-7px);
+  }
+  body .page .brand-block .tagline{
+    font-size:17px;
+    line-height:1.15;
+    letter-spacing:-.28px;
+  }
+  body .page .brand-block:after{
+    width:46px;
+    height:3px;
+    margin-top:8px!important;
+  }
+  body .page .shop{
+    min-height:168px;
+    grid-template-columns:74px minmax(0,1fr) 50px;
+    gap:20px;
+    padding:24px;
+    border-radius:34px;
+  }
+  body .page .shop-icon{
+    width:74px;
+    height:74px;
+    border-radius:23px;
+  }
+  body .page .shop-title{
+    font-size:27px;
+  }
+  body .page .shop-url{
+    margin-top:8px;
+    font-size:14px;
+  }
+  body .page .shop-arrow{
+    width:50px;
+    height:50px;
+  }
+  body .page .section-head{
+    margin:0 2px 16px;
+  }
+  body .page .section-head h2{
+    font-size:23px;
+  }
+  body .page .social-panel{
+    border-radius:32px;
+  }
+  body .page .social{
+    min-height:160px;
+    padding:22px;
+  }
+  body .page .icon{
+    width:54px;
+    height:54px;
+    border-radius:17px;
+  }
+  body .page .go{
+    width:36px;
+    height:36px;
+  }
+  body .page .platform{
+    font-size:18px;
+  }
+  body .page .handle{
+    font-size:12px;
+    margin-top:6px;
+  }
+  body .page .footer{
+    margin-top:30px;
+    padding-top:18px;
+    font-size:12.5px;
+  }
+}
+
+@media (min-width:1440px){
+  body .page{
+    width:min(1360px,calc(100vw - 90px));
+    padding:64px 72px 38px;
+  }
+  body .page .layout{
+    gap:84px;
+  }
+}
+
+@media (min-width:800px) and (max-width:1023px) and (orientation:landscape){
+  body .page .header{text-align:center!important;padding-bottom:12px!important}
+  body .page .brand-block{align-items:center!important}
+  body .page .brand-block .logo{margin-left:auto!important;margin-right:auto!important}
+  body .page .brand-block .tagline{text-align:center!important}
 }
